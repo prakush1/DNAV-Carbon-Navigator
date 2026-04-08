@@ -8,6 +8,8 @@ on:
 jobs:
   keep_alive:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
@@ -29,4 +31,4 @@ jobs:
           python keep_alive.py
 
       - name: Keep workflow alive (avoid 60-day expiry)
-        uses: gautamkrishnar/keepalive-workflow@master
+        uses: gautamkrishnar/keepalive-workflow@v2

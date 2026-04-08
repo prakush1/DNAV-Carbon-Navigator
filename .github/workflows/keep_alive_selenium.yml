@@ -30,5 +30,3 @@ jobs:
         run: |
           python keep_alive.py
 
-      - name: Keep workflow alive (avoid 60-day expiry)
-        uses: gautamkrishnar/keepalive-workflow@v2
